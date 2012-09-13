@@ -1,6 +1,7 @@
 <?php
 $a="Priyanka";
+$b="Mohite";
 
-echo "Welcome $a";
+echo "Welcome $b";
 
 ?>
