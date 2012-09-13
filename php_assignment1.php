@@ -65,21 +65,31 @@ EOD;
 	echo "<br /><br />";
 
 	echo "11.Divide the string 1 by occurances of '.'<br/><br/>Ans : ";
-	$token = strtok($string1, " ");              
-	    
-	    while ($token !== false) {
-	    
-	      if((strcmp($token,"PHP"))==0)
-	      {
-		  echo "$subString found in string one";
-		  echo '<br/>';
-	       }
-	     $subString = strtok(" \n\t");
-	    }
+	$tokens = explode(".", $string1);
+
+	$reverse = array_reverse($tokens);
+	echo '<pre>';
+	print_r($reverse);
+	echo '</pre>';
 	echo "<br /><br />";
 
 	echo "12.Remove the HTML characters<br/><br/>Ans : ";
 	echo strip_tags($string1);
+	echo "<br /><br />";
+
+	echo "13.Print the 'PHP' word from string 1 by traversing it using string functions<br/><br/>Ans :";
+	$token = strtok($string1, " ");              
+	    $cnt=1;
+	    while ($token !== false) {
+	    
+	      if((strcmp($token,"PHP"))==0)
+	      {
+		  echo "PHP $cnt time occur in string1";
+		  $cnt=$cnt+1;
+		  echo '<br/>';
+	       }
+	     $token = strtok(" \n\t");
+	    }
 	echo "<br /><br />";
 
 	echo "14.Find the length of string<br/><br/>Ans : ";
