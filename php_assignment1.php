@@ -64,7 +64,7 @@ EOD;
 	echo "<br/>";
 	echo "<br /><br />";
 
-	echo "11.Divide the string 1 by occurances of '.'<br/><br/>Ans : ";
+	echo "11.Divide the string 1 by occurances of '.'Combine the array in reverse word sequence<br/><br/>Ans : ";
 	$tokens = explode(".", $string1);
 
 	$reverse = array_reverse($tokens);
