@@ -3,36 +3,51 @@
 	$string1="PHP parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as PHP code. The parser then executes 			all of the code it finds until it runs into a PHP closing <br/> tag.";
 
 	$string2="PHP does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the 			variable is used.";
-
-	
+	echo "Ans 1: ";
+	echo substr_count($string1,"PHP"); 
+	echo "<br /><br />";
+	echo "Ans 2: ";
+	echo strpos($string1,"PHP");
+	echo "<br /><br />";
+	echo "Ans 3: ";
+	$string3 = explode(' ',$string1);
+	echo '<pre>';
+	print_r($string3);
+	echo '</pre>';
+	echo "<br /><br />";
 	echo "Ans 4: ";
 	$upperstr=strtoupper ( $string1 );
 	echo $upperstr;
 	echo "<br /><br />";
-
 	echo "Ans 5: ";
 	$combinedstr=$string1.$string2;
 	echo $combinedstr;
 	echo "<br /><br />";
-	
 	echo "Ans 6: ";
 	echo <<<EOD
 	"PHP parses a file by looking for <br/> one of the special tags that tells it to start interpreting the text as PHP code. The parser then executes 		all of the code it finds until it runs into a PHP closing <br/> tag.";
 	<br /><br />
 	"PHP does not require (or support) explicit type definition in variable declaration; a variable's type is determined by the context in which the 		variable is used.";
 EOD;
-
 	echo "<br /><br />";
 	echo "Ans 7: ";
 	echo date("d-m-Y");
 	echo "<br /><br />";
-
 	echo "Ans 8: ";
 	echo date("jS M Y");
 	echo "<br /><br />";
 	echo "Ans 9: ";
 	$addSevenDays = mktime(0,0,0,date("m"),date("d")+7,date("Y"));
 	echo date("d-m-Y", $addSevenDays);
+	echo "<br /><br />";
+	echo "Ans 12: ";
+	echo strip_tags($string1);
+	echo "<br /><br />";
+	echo "Ans 14: ";
+	echo strlen($string1);
+	echo "<br /><br />";
+	echo "Ans 16: ";
+	echo "Global varibles provided by PHP<br/>Superglobals<br/>GLOBALS<br/>SERVER<br/>_GET<br/>_POST<br/>_FILES<br/>_REQUEST<br/>_SESSION<br/>_ENV<br/>	_COOKIE<br/>php_errormsg<br/>HTTP_RAW_POST_DATA<br/>http_response_header<br/>argc<br/>argv";
 	echo "<br /><br />";
 	echo "Ans 19: ";
 	$days = (strtotime("12-5-2011") - strtotime("12-4-2010")) / (60 * 60 * 24);
